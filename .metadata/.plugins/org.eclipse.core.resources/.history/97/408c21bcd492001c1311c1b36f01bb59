@@ -1,0 +1,32 @@
+package DSA_ARRAYS;
+
+public class ArrayRotation {
+	
+	static void leftRotate(int a[], int d, int n) {
+		int i=0,j=0;
+		while(i<n-1&&j<d) {
+			if(i<n-1) {
+				int temp = a[0];
+				   a[n-1]= temp;
+				   a[i] = a[i+1];
+				   i++;
+			}
+			
+			else
+			{
+				d++;
+			}
+		}
+		
+		for(int k=0;k<n;k++) {
+			System.out.println(a[k]);
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int a[] = {1,2,3,4,5};
+        leftRotate(a, 2, 5);
+	}
+
+}
